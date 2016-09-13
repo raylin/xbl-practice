@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <binding id="demo">
+    <content>
+      <html:div anonid="foo">
+        <html:
+      </html:div>
+      <html:div anonid="bar">
+      </html:div>
+    </content>
+    <implementation>
+      <constructor>
+      <![CDATA[
+      // getAnonymousNodes
+      const bindingChildNodes = document.getAnonymousNodes(this);
+      console.log(bindingChildNodes);
+      // getAnonymousElementByAttribute
+      const 
+      // getBindingParent
+      ]]>
+      </constructor>
+    </implementation>
+  </binding>
+</bindings>

@@ -1,0 +1,19 @@
+{
+  "name": "xbl-practice",
+  "version": "0.0.1",
+  "description": "XBL practices",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/browser-sync/bin/browser-sync.js start -s -f '*.html' '*.xml'",
+    "prestart": "npm i",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "XBL"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.15.0"
+  }
+}
