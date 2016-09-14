@@ -3,7 +3,7 @@
   <binding id="demo">
     <content>
       <html:div anonid="foo">
-        <html:
+        <html:span anonid="fooHi">Hi</html:span>
       </html:div>
       <html:div anonid="bar">
       </html:div>
@@ -11,12 +11,24 @@
     <implementation>
       <constructor>
       <![CDATA[
+      // show this
+      console.log(this);
+
       // getAnonymousNodes
       const bindingChildNodes = document.getAnonymousNodes(this);
       console.log(bindingChildNodes);
+
       // getAnonymousElementByAttribute
-      const 
+      const barElm = this.ownerDocument.getAnonymousElementByAttribute(this, "anonid", "bar");
+      const fooHiElm = document.getAnonymousElementByAttribute(this, "anonid", "fooHi");
+      console.log(barElm);
+      console.log(fooHiElm);
+
       // getBindingParent
+      const barBindingParent = document.getBindingParent(barElm);
+      const fooHiBindingParent = document.getBindingParent(fooHiElm);
+      console.log(barBindingParent === fooHiBindingParent); // true
+      console.log(barBindingParent === this); // true
       ]]>
       </constructor>
     </implementation>
